@@ -104,7 +104,7 @@ export const translations = {
   },
   zh: {
     header: {
-      name: '刘汉升'
+      name: '刘涵升'
     },
     intro: {
       title: '欢迎访问我的作品集',
