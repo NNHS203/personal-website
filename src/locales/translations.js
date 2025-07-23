@@ -5,39 +5,60 @@ export const translations = {
     },
     intro: {
       title: 'Welcome to My Portfolio',
-      description: 'Software Engineer & Cybersecurity Specialist'
+      description: 'Cybersecurity & Digital Criminology Double Major at Purdue'
     },
     experience: {
       title: 'Experience',
       items: [
         {
-          title: 'PepsiCo/TDM Purdue — Mapping Environmental Risks',
-          duration: 'August 2024-Present',
+          title: 'Texas Instruments — IT Security Risk & Compliance Intern',
+          duration: 'May 2025 - August 2025',
           details: [
-            'Developed a predictive environmental risk mapping tool for PepsiCo, focusing on water-related risks in key U.S. states.',
-            'Created dashboards that provided weekly predictions on floods, droughts, freezes, extreme heat, and other climate-related events, with projections for changes over the next 3-5 years due to climate change.',
-            'Integrated local news, social media, and legislative data to generate real-time alerts and insights on water quality and environmental risks.',
-            'Utilized skills in data scraping, social listening, GIS, and Power BI to deliver actionable insights for sustainable operations.'
+            'Designed and developed an enterprise-wide interactive Splunk dashboard to visualize operational metrics across Risk & Compliance activities impacting all of Texas Instruments.',
+            'Created and optimized Splunk searches, dashboards, and alerts to monitor and analyze data related to training participation, phishing simulation outcomes, risk trends, open procedures, compliance status, and critical task management.',
+            'Built ETL pipelines using Python to efficiently extract, transform, and load data from diverse sources into Splunk, enabling comprehensive analysis.',
+            'Integrated data via Cribl pipelines to streamline REST API ingestion, ensuring data integrity and consistency across platforms.',
+            'Utilized Insomnia to test and validate APIs, safeguarding the reliability of data ingestion and processing workflows.',
+            'Enabled enterprise-wide data visibility by deploying and configuring Universal Forwarders across critical servers, enhancing real-time security insights.',
+            'Enhanced organizational transparency by developing dashboards that analyzed 800K+ logs across risk trends, training participation, phishing simulations, compliance procedures, and task management.',
+            'Strengthened expertise in data pipeline development, cybersecurity metrics, operational risk analysis, and compliance monitoring.'
           ]
         },
         {
-          title: 'Sinopec/Cybersecurity Intern at SLOF - Victory Soft',
-          duration: 'July 2024-August 2024',
+          title: 'PepsiCo — Mapping Environmental Risks',
+          duration: 'August 2024 - May 2025',
           details: [
-            'Provided IT and cybersecurity support to Shengli Oil Field (SLOF), a major division of Sinopec Group, managing firewalls, IPS, and WAF to protect infrastructure serving nearly 500,000 employees.',
-            'Led the transfer of physical servers to cloud infrastructure, enhancing scalability and flexibility for subsidiary companies.',
-            'Played a key role in the National Cybersecurity Defense Exercise, honing skills in security tools, threat analysis, and incident response.',
-            'Intercepted and mitigated thousands of cyberattacks, including SQL injections, XSS, and brute force attacks, ensuring zero internal breaches.'
+            'Built a predictive environmental risk mapping tool for PepsiCo to identify and mitigate water-related risks across key U.S. states, supporting the company’s 2025 water-use efficiency goals.',
+            'Developed an interactive Power BI dashboard integrating real-time and historical climate data (temperature, drought, flood, humidity, etc.) with state- and county-level risk insights.',
+            'Automated daily API data extractions and transformations via Power Query for seamless analysis and up-to-date monitoring.',
+            'Implemented machine learning/keyword-based monitoring and social listening to detect emerging sustainability challenges, triggering alerts on abnormal water-related incidents.',
+            'Collaborated cross-functionally with PepsiCo mentors, faculty advisors, and a multi-disciplinary student team to deliver insights that drive sustainable and adaptive manufacturing operations.'
           ]
         },
         {
-          title: 'John Deere/TDM Purdue — Estimating Soil Moisture Using Geospatial and Weather Data',
-          duration: 'January 2024-April 2024',
+          title: 'Sinopec — Cybersecurity Intern',
+          duration: 'July 2024 - August 2024',
           details: [
-            'Spearheaded data visualization initiatives using Tableau, transforming complex soil and weather data into insightful, user-friendly visual representations.',
-            'Played a pivotal role in aggregating and analyzing diverse datasets, focusing on variables critical to soil moisture such as topography and weather conditions.',
-            'Utilized Python for data wrangling and analysis, employing libraries like Pandas to efficiently process and interpret large datasets.',
-            'Contributed significantly to the development of a soil moisture index model, enhancing John Deere\'s digital agricultural solutions.'
+            'Spearheaded cyber defense initiatives for Shengli Oil Field (SLOF), collaborating with Qianxin, NSFocus, and Sangfor to protect critical infrastructure.',
+            'Administered and maintained firewalls, Intrusion Prevention Systems (IPS), and Web Application Firewalls (WAF) to defend against a wide range of cyber threats.',
+            'Provided IT support and database management for SLOF, serving nearly 500,000 employees across ~100 affiliated companies, ensuring system reliability and swift issue resolution.',
+            'Supervised physical server room operations, overseeing device installations and ensuring continuous monitoring to prevent operational disruptions.',
+            'Selected as a Blue Team member in the National Cybersecurity Defense Exercise, successfully intercepting thousands of attacks including network scanning, SQL injection, XSS, brute force, and backdoor attempts.',
+            'Conducted forensic analysis and offline remediation on compromised servers and endpoints, eliminating attack vectors and reinforcing system security.',
+            'Monitored and analyzed suspicious IP traffic using situational awareness platforms and WAF tools, blocking malicious requests in real time.',
+            'Strengthened expertise in cybersecurity operations, IT infrastructure support, and incident response, contributing to a robust defense posture for SLOF.'
+          ]
+        },
+        {
+          title: 'John Deere — Estimating Soil Moisture Using Geospatial and Weather Data',
+          duration: 'January 2024 - April 2024',
+          details: [
+            'Developed a machine learning model to predict soil moisture levels using XGBoost, achieving an R² accuracy of 0.9 on test data — enabling growers to optimize crop planting, tilling, and fertilization timing.',
+            'Engineered a comprehensive dataset by merging USDA SSURGO soil data (sand, silt, clay composition) with Midwest weather data (temperature, precipitation, wind, snow, air pressure) from MeteoStat APIs.',
+            'Conducted feature extraction and PCA analysis, identifying key soil and weather variables impacting soil moisture, with 80% of variance explained by three principal components.',
+            'Created interactive visualizations with Python libraries, ArcGIS, and Tableau to map soil textures, precipitation patterns, and moisture predictions across geographic regions.',
+            'Constructed time-series data pipelines to capture temporal relationships between weather variables and soil characteristics.',
+            'Collaborated closely with John Deere mentors and academic advisors to align technical outcomes with precision agriculture goals.'
           ]
         }
       ]
@@ -47,24 +68,27 @@ export const translations = {
       items: [
         {
           school: 'Purdue University, 610 Purdue Mall, West Lafayette, IN 47907',
-          degree: 'Major: Cybersecurity + Digital Criminology + Entrepreneurship & Innovation',
-          duration: 'August 2022 - Expected May 2026',
-          gpa: 'Major GPA: 3.72/4.0',
-          details: [
-            'Junior (Senior-level Credits)'
-          ]
+          degree: [
+            'Bachelor of Science — Cybersecurity',
+            'Bachelor of Arts — Digital Criminology',
+            'Certificate in Entrepreneurship & Innovation'
+          ],
+          duration: 'August 2022 - May 2026',
+          details: []
         }
       ]
     },
     skills: {
       title: 'Skills',
-      items: ['React Native', 'Node.js', 'Python', 'intermediate Java', 'HTML/CSS', 'Basic understanding Kali Linux', 'Metasploit', 'nmap', 'Wireshark', 'John the Ripper', 'Hydra', 'Tableau', 'Agile', 'MS office']
+      items: [
+        'Splunk', 'Kali Linux', 'VMWare', 'Magnet AXIOM', 'Cellebrite', 'Autopsy', 'Metasploit', 'Nmap', 'Wireshark', 'John the Ripper', 'Hydra', 'Python', 'Java', 'Node.js', 'React Native', 'HTML/CSS', 'Flask', 'Power BI', 'Tableau', 'ArcGIS', 'SQL', 'XGBoost', 'PCA', 'AWS', 'Docker', 'Firebase', 'Cribl', 'Insomnia', 'GitHub', 'Agile (Scrum)', 'Trello', 'MS Office'
+      ]
     },
     projects: {
       title: 'Projects',
       items: [
         {
-          title: 'Budget Bites—Food Ordering Mobile App',
+          title: 'Budget Bites — Food Ordering Mobile App',
           duration: 'July 2023 - April 2024',
           details: [
             'Developed a fully functional React Native mobile app allowing users to order food boxes and pick them up at partner restaurants.',
@@ -75,9 +99,9 @@ export const translations = {
         },
         {
           title: 'Half Cafe App — Ordering web app for school cafeteria',
-          duration: 'August 2021 - July 2021',
+          duration: 'August 2020 - July 2021',
           details: [
-            'Worked on a 4-person team to build an online ordering web app for our school\'s cafeteria using Python, Flask, HTML/CSS, AWS and Docker etc.',
+            'Worked on a 4-person team to build an online ordering web app for our school’s cafeteria using Python, Flask, HTML/CSS, AWS and Docker etc.',
             'Supported implementation of agile development methods including Scrum framework, Trello project management, and GitHub version control',
             'Web app enabled cafeteria staff to receive and fulfill drink orders remotely during school hours',
             'Team delivered functioning prototype after 1 semester of development'
@@ -90,16 +114,16 @@ export const translations = {
             'Developed and executed phishing simulation for 2000+ staff members to improve security awareness',
             'Sent simulated phishing emails and fake login pages and tracked staff response rates',
             'Educated staff who fell for phishing attempts by directing them to our informational webpage on phishing risks',
-            'Project was a collaboration with the school district\'s IT department as part of their cybersecurity curriculum'
+            'Project was a collaboration with the school district’s IT department as part of their cybersecurity curriculum'
           ]
         }
       ]
     },
     contact: {
-      location: 'United States',
       email: 'liu343@purdue.edu',
       phone: '773-584-7886',
-      linkedin: 'https://www.linkedin.com/in/hanshengliu/'
+      linkedin: 'https://www.linkedin.com/in/hanshengliu/',
+      website: 'https://nnhs203.github.io/personal-website/'
     }
   },
   zh: {
@@ -108,39 +132,60 @@ export const translations = {
     },
     intro: {
       title: '欢迎访问我的作品集',
-      description: '软件工程师 & 网络安全专家'
+      description: '网络安全与数据工程专业学生 | 软件工程师'
     },
     experience: {
       title: '工作经历',
       items: [
         {
-          title: '百事可乐/TDM普渡大学 — 环境风险映射',
-          duration: '2024年8月至今',
+          title: '德州仪器 — IT安全风险与合规实习生',
+          duration: '2025年5月 - 2025年8月',
           details: [
-            '为百事可乐开发预测性环境风险映射工具，重点关注美国关键州的水资源相关风险',
-            '创建仪表板，提供未来3-5年内洪水、干旱、冻害、极端高温和其他气候相关事件的每周预测和变化趋势',
-            '整合本地新闻、社交媒体和立法数据，生成水质和环境风险的实时警报和洞察',
-            '运用数据抓取、社交监听、GIS和Power BI技能为可持续运营提供可行的见解'
+            '设计并开发了企业级Splunk交互式仪表板，实现对德州仪器风险与合规活动的运营指标可视化。',
+            '创建并优化Splunk搜索、仪表板和告警，监控和分析培训参与、钓鱼模拟、风险趋势、流程、合规状态及关键任务管理等数据。',
+            '使用Python搭建ETL数据管道，高效提取、转换并加载多源数据至Splunk，支持全面分析。',
+            '通过Cribl管道集成REST API数据，确保各平台间数据一致性与完整性。',
+            '利用Insomnia测试和验证API，保障数据采集与处理流程的可靠性。',
+            '在关键服务器部署和配置Universal Forwarders，实现企业级数据可视化，提升实时安全洞察能力。',
+            '开发分析80万+日志的仪表板，涵盖风险趋势、培训、钓鱼模拟、合规流程及任务管理，提升组织透明度。',
+            '深化了数据管道开发、网络安全指标、运营风险分析与合规监控等专业能力。'
           ]
         },
         {
-          title: '中石化/胜利油田网络安全实习生 - 胜利软件',
-          duration: '2024年7月-2024年8月',
+          title: '百事可乐 — 环境风险映射',
+          duration: '2024年8月 - 2025年5月',
           details: [
-            '为中石化集团胜利油田分公司提供IT和网络安全支持，管理防火墙、IPS和WAF，保护服务近50万员工的基础设施',
-            '领导物理服务器向云基础设施的迁移，提高子公司的可扩展性和灵活性',
-            '在国家网络安全防御演习中发挥关键作用，提升安全工具使用、威胁分析和事件响应能力',
-            '拦截和缓解数千次网络攻击，包括SQL注入、XSS和暴力破解攻击，确保零内部漏洞'
+            '为百事可乐开发预测性环境风险映射工具，识别并缓解美国重点州的水资源相关风险，助力公司2025年用水效率目标。',
+            '开发交互式Power BI仪表板，整合实时与历史气候数据（温度、干旱、洪水、湿度等）及州/县级风险洞察。',
+            '通过Power Query自动化每日API数据提取与转换，实现高效分析与实时监控。',
+            '实现基于机器学习和关键词的监控及社交媒体监听，及时发现可持续发展挑战并对异常水事件自动预警。',
+            '与百事可乐导师、院系顾问及多学科学生团队协作，推动可持续与自适应制造运营。'
           ]
         },
         {
-          title: '约翰迪尔/TDM普渡大学 — 使用地理空间和天气数据估算土壤水分',
-          duration: '2024年1月-2024年4月',
+          title: '中石化 — 网络安全实习生',
+          duration: '2024年7月 - 2024年8月',
           details: [
-            '使用Tableau主导数据可视化计划，将复杂的土壤和天气数据转化为富有洞察力的用户友好可视化表示',
-            '在汇总和分析多样化数据集方面发挥关键作用，重点关注地形和天气条件等对土壤水分至关重要的变量',
-            '使用Python进行数据整理和分析，运用Pandas等库高效处理和解释大型数据集',
-            '为土壤水分指数模型的开发做出重要贡献，提升约翰迪尔的数字农业解决方案'
+            '主导胜利油田（SLOF）网络防御，协同奇安信、绿盟、深信服等厂商保护关键基础设施。',
+            '管理防火墙、入侵防御系统（IPS）和Web应用防火墙（WAF），防御多种网络威胁。',
+            '为SLOF提供IT支持和数据库管理，服务近50万员工、约100家子公司，保障系统高可用与高效运维。',
+            '监督机房运维，负责设备安装与持续监控，防止运营中断。',
+            '作为国家网络安全防御演习蓝队成员，成功拦截SQL注入、XSS、暴力破解等多类攻击。',
+            '对受损服务器和终端进行取证分析与离线修复，消除攻击路径，强化系统安全。',
+            '利用态势感知平台和WAF工具监控分析可疑IP流量，实时阻断恶意请求。',
+            '提升了网络安全运维、IT基础设施支持和事件响应等能力，为SLOF构建坚实防线。'
+          ]
+        },
+        {
+          title: '约翰迪尔 — 利用地理与气象数据估算土壤水分',
+          duration: '2024年1月 - 2024年4月',
+          details: [
+            '开发基于XGBoost的机器学习模型，预测土壤水分，测试集R²达0.9，助力农户优化播种、耕作和施肥时机。',
+            '整合USDA SSURGO土壤数据（砂、粉、黏土比例）与中西部气象数据（温度、降水、风、雪、气压），实现数据融合。',
+            '进行特征提取与主成分分析，识别影响土壤水分的关键变量，前三主成分解释80%方差。',
+            '用Python、ArcGIS、Tableau等工具制作交互式可视化，展示土壤质地、降水分布和水分预测。',
+            '构建时序数据管道，捕捉气象变量与土壤特性间的动态关系。',
+            '与约翰迪尔导师和学术顾问紧密合作，确保技术成果契合精准农业目标。'
           ]
         }
       ]
@@ -150,50 +195,53 @@ export const translations = {
       items: [
         {
           school: '普渡大学，610 Purdue Mall, West Lafayette, IN 47907',
-          degree: '专业：网络安全 + 数字犯罪学 + 创业与创新',
-          duration: '2022年8月 - 预计2026年5月毕业',
-          gpa: '专业GPA：3.72/4.0',
-          details: [
-            '大三（高年级学分）'
-          ]
+          degree: [
+            '网络安全理学学士',
+            '数字犯罪学文学学士',
+            '创业与创新证书'
+          ],
+          duration: '2022年8月 - 2026年5月',
+          details: []
         }
       ]
     },
     skills: {
       title: '技能',
-      items: ['React Native', 'Node.js', 'Python', '中级Java', 'HTML/CSS', '基础Kali Linux', 'Metasploit', 'nmap', 'Wireshark', 'John the Ripper', 'Hydra', 'Tableau', 'Agile', 'MS office']
+      items: [
+        'Splunk', 'Kali Linux', 'VMWare', 'Magnet AXIOM', 'Cellebrite', 'Autopsy', 'Metasploit', 'Nmap', 'Wireshark', 'John the Ripper', 'Hydra', 'Python', 'Java', 'Node.js', 'React Native', 'HTML/CSS', 'Flask', 'Power BI', 'Tableau', 'ArcGIS', 'SQL', 'XGBoost', 'PCA', 'AWS', 'Docker', 'Firebase', 'Cribl', 'Insomnia', 'GitHub', '敏捷开发（Scrum）', 'Trello', 'MS Office'
+      ]
     },
     projects: {
       title: '项目经验',
       items: [
         {
-          title: 'Budget Bites—食品订购移动应用',
+          title: 'Budget Bites — 食品订购移动应用',
           duration: '2023年7月 - 2024年4月',
           details: [
-            '开发功能完整的React Native移动应用，允许用户订购食品盒并在合作餐厅取货',
-            '使用Node.js、Firebase、Sanity和Stripe API实现后端功能，用于用户认证、实时数据库存储、内容管理和安全支付',
-            '设计并集成用户友好的功能，用于浏览食品选项、定制订单和安排取货',
-            '通过Firebase认证和Stripe支付网关集成确保用户认证和数据保护安全'
+            '独立开发完整的React Native移动应用，支持用户订购食品盒并在合作餐厅自取。',
+            '后端采用Node.js、Firebase、Sanity和Stripe API，实现用户认证、实时数据库、内容管理与安全支付。',
+            '设计并集成友好界面，支持浏览食品、定制订单和预约取餐。',
+            '通过Firebase认证和Stripe支付网关，保障用户身份验证与数据安全。'
           ]
         },
         {
-          title: 'Half Cafe App — 学校食堂订餐网络应用',
-          duration: '2021年8月 - 2021年7月',
-          details: [
-            '在4人团队中使用Python、Flask、HTML/CSS、AWS和Docker等技术为学校食堂构建在线订餐网络应用',
-            '支持实施敏捷开发方法，包括Scrum框架、Trello项目管理和GitHub版本控制',
-            '网络应用使食堂工作人员能够在上课时间远程接收和完成饮品订单',
-            '团队在一个学期后交付了功能原型'
-          ]
-        },
-        {
-          title: '钓鱼项目 — 与IT区203合作的钓鱼项目',
+          title: 'Half Cafe App — 学校食堂订餐Web应用',
           duration: '2020年8月 - 2021年7月',
           details: [
-            '开发并执行针对2000多名员工的钓鱼模拟，提高安全意识',
-            '发送模拟钓鱼邮件和虚假登录页面，并跟踪员工响应率',
-            '通过引导受骗员工访问我们关于钓鱼风险的信息网页进行教育',
-            '该项目是与学区IT部门合作的网络安全课程的一部分'
+            '与4人团队合作，基于Python、Flask、HTML/CSS、AWS和Docker开发学校食堂订餐Web应用。',
+            '支持Scrum敏捷开发、Trello项目管理和GitHub版本控制。',
+            '实现食堂远程接单与饮品配送，提升运营效率。',
+            '团队在一学期内交付可用原型。'
+          ]
+        },
+        {
+          title: '钓鱼项目 — 与IT区203合作',
+          duration: '2020年8月 - 2021年7月',
+          details: [
+            '为2000+名员工设计并执行钓鱼邮件模拟，提升安全意识。',
+            '发送模拟钓鱼邮件和假登录页，跟踪员工响应率。',
+            '对受骗员工进行风险教育，指引访问钓鱼风险信息网页。',
+            '项目与学区IT部门合作，作为网络安全课程一部分。'
           ]
         }
       ]
@@ -202,7 +250,8 @@ export const translations = {
       location: '美国',
       email: 'liu343@purdue.edu',
       phone: '773-584-7886',
-      linkedin: 'https://www.linkedin.com/in/hanshengliu/'
+      linkedin: 'https://www.linkedin.com/in/hanshengliu/',
+      website: 'https://nnhs203.github.io/personal-website/'
     }
   }
 }

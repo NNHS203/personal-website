@@ -70,9 +70,25 @@ function App() {
                       <Typography variant="h4" gutterBottom>
                         {t('intro.title')}
                       </Typography>
-                      <Typography variant="body1" color="text.secondary" paragraph>
-                        {t('intro.description')}
-                      </Typography>
+                      {/* Contact info under intro title */}
+                      <Stack spacing={1}>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <EmailIcon color="primary" />
+                          <Typography component="a" href={`mailto:${t('contact.email')}`} sx={{ textDecoration: 'none', color: 'inherit' }}>{t('contact.email')}</Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <PhoneIcon color="primary" />
+                          <Typography component="a" href={`tel:${t('contact.phone')}`} sx={{ textDecoration: 'none', color: 'inherit' }}>{t('contact.phone')}</Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <LinkedInIcon color="primary" />
+                          <Typography component="a" href={t('contact.linkedin')} target="_blank" rel="noopener" sx={{ textDecoration: 'none', color: 'inherit' }}>{t('contact.linkedin')}</Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <CodeIcon color="primary" />
+                          <Typography component="a" href={t('contact.website')} target="_blank" rel="noopener" sx={{ textDecoration: 'none', color: 'inherit' }}>{t('contact.website')}</Typography>
+                        </Stack>
+                      </Stack>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -123,9 +139,20 @@ function App() {
                           <Typography variant="h6" gutterBottom>
                             {edu.school}
                           </Typography>
-                          <Typography variant="subtitle1" gutterBottom>
-                            {edu.degree}
-                          </Typography>
+                          {/* Render each degree/certificate on a separate line if degree is an array */}
+                          {Array.isArray(edu.degree) ? (
+                            <Box>
+                              {edu.degree.map((deg, i) => (
+                                <Typography variant="subtitle1" gutterBottom key={i}>
+                                  {deg}
+                                </Typography>
+                              ))}
+                            </Box>
+                          ) : (
+                            <Typography variant="subtitle1" gutterBottom>
+                              {edu.degree}
+                            </Typography>
+                          )}
                           <Typography variant="subtitle2" color="text.secondary" gutterBottom>
                             {edu.duration}
                           </Typography>
