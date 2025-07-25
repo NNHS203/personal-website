@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NNHS203.github.io/personal-website",
+  "homepage": "https://NNHS203.github.io/personal-website-1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
