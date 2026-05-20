@@ -120,7 +120,7 @@ export const translations = {
       ]
     },
     contact: {
-      email: 'liu343@purdue.edu',
+      email: '2004hliu@gmail.com',
       phone: '773-584-7886',
       linkedin: 'https://www.linkedin.com/in/hanshengliu/',
       website: 'https://nnhs203.github.io/personal-website/'
@@ -248,7 +248,7 @@ export const translations = {
     },
     contact: {
       location: '美国',
-      email: 'liu343@purdue.edu',
+      email: '2004hliu@gmail.com',
       phone: '773-584-7886',
       linkedin: 'https://www.linkedin.com/in/hanshengliu/',
       website: 'https://nnhs203.github.io/personal-website/'

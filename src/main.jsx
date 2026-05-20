@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ThemeProvider, createTheme } from '@mui/material'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { LanguageProvider } from './contexts/LanguageContext'
 import App from './App'
@@ -25,8 +25,26 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: '"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    allVariants: {
+      letterSpacing: 0,
+    },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          scrollBehavior: 'auto',
+        },
+        body: {
+          textRendering: 'optimizeLegibility',
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
+        },
+        '::selection': {
+          backgroundColor: 'rgba(0, 113, 227, 0.18)',
+        },
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
