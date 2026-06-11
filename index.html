@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hansheng Liu - Purdue Cybersecurity and Digital Criminology portfolio focused on security operations, risk analytics, digital forensics, systems, and applied data." />
-    <meta name="keywords" content="Hansheng Liu, Purdue, Cybersecurity, Digital Criminology, Digital Forensics, Splunk, Network Security, Python, Data Mine" />
-    <title>Hansheng Liu - Cybersecurity Portfolio</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0d10" />
+    <meta
+      name="description"
+      content="Hansheng Liu — Cybersecurity & Digital Forensics. B.S. Cybersecurity & B.A. Digital Criminology, Purdue '26. Incoming Security Risk & Compliance at Texas Instruments. SIEM detection, threat operations, digital forensics, and applied data."
+    />
+    <meta
+      name="keywords"
+      content="Hansheng Liu, Purdue, Cybersecurity, Digital Criminology, Digital Forensics, Security Risk, Splunk, Network Security, Python, Texas Instruments"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hansheng Liu — Cybersecurity & Digital Forensics" />
+    <meta
+      property="og:description"
+      content="Purdue '26, incoming Security Risk & Compliance at Texas Instruments. Security operations, risk analytics, digital forensics, and applied data."
+    />
+    <meta property="og:url" content="https://nnhs203.github.io/personal-website/" />
+    <meta property="og:image" content="https://nnhs203.github.io/personal-website/hansheng-liu-profile.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0d10'/%3E%3Ctext x='30' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23ece9e2' text-anchor='middle'%3EHL%3C/text%3E%3Ccircle cx='52' cy='41' r='4' fill='%2351d6a4'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500&family=Instrument+Serif:ital@0;1&display=swap"
+    />
+    <title>Hansheng Liu — Cybersecurity & Digital Forensics</title>
+    <script>
+      // Apply saved theme before first paint to avoid a flash of the wrong mode.
+      try {
+        var saved = localStorage.getItem('portfolio-theme')
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.dataset.theme = saved
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

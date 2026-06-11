@@ -1,0 +1,13 @@
+import { chromium } from 'playwright'
+const browser = await chromium.launch({ channel: 'chrome' })
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+await page.addInitScript(() => localStorage.setItem('portfolio-theme', 'dark'))
+await page.goto('http://localhost:8000/personal-website/', { waitUntil: 'load', timeout: 90000 })
+await page.waitForTimeout(1000)
+const box = await page.locator('.hero__ticker').boundingBox()
+console.log('ticker box:', JSON.stringify(box))
+await page.locator('.hero__ticker').scrollIntoViewIfNeeded()
+await page.waitForTimeout(300)
+await page.locator('.hero__ticker').screenshot({ path: 'tests/shots/ticker.png' })
+await browser.close()
+console.log('done')

@@ -1,0 +1,129 @@
+/* ————————————————————————————————————————————————
+   Design tokens — "Case File" system
+   Dark: night-ops ink. Light: paper dossier.
+   ———————————————————————————————————————————————— */
+
+:root {
+  /* Type families */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Type scale */
+  --text-hero: clamp(3.1rem, 1.1rem + 9.2vw, 8.25rem);
+  --text-h2: clamp(2.35rem, 1.4rem + 4.4vw, 5.25rem);
+  --text-h3: clamp(1.45rem, 1.25rem + 1vw, 2.1rem);
+  --text-h3-lg: clamp(1.9rem, 1.4rem + 2.4vw, 3.4rem);
+  --text-lede: clamp(1.06rem, 0.95rem + 0.55vw, 1.3rem);
+  --text-body: clamp(0.98rem, 0.93rem + 0.25vw, 1.08rem);
+  --text-mono: clamp(0.72rem, 0.69rem + 0.15vw, 0.8rem);
+  --text-mono-xs: 0.68rem;
+  --tracking-mono: 0.16em;
+
+  /* Rhythm */
+  --space-section: clamp(4.75rem, 3rem + 8vw, 11rem);
+  --space-block: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  --gutter: clamp(1.25rem, 0.5rem + 4vw, 4rem);
+  --container-max: 1360px;
+  --header-height: 60px;
+
+  /* Motion */
+  --duration-fast: 160ms;
+  --duration-normal: 320ms;
+  --duration-slow: 700ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Fixed swatches (theme-independent) */
+  --ink: #0b0d10;
+  --ink-raise: #11141a;
+  --paper: #efece4;
+  --paper-raise: #f7f5ef;
+
+  --radius: 10px;
+  --radius-lg: 18px;
+  --radius-pill: 980px;
+}
+
+:root[data-theme='dark'] {
+  --bg: var(--ink);
+  --bg-raise: var(--ink-raise);
+  --text: #e8e7e2;
+  --text-strong: #f7f6f2;
+  --text-muted: rgba(232, 231, 226, 0.62);
+  --text-faint: rgba(232, 231, 226, 0.4);
+  --line: rgba(232, 231, 226, 0.13);
+  --line-strong: rgba(232, 231, 226, 0.3);
+
+  --accent: #51d6a4;
+  --accent-ink: #06120c;
+  --accent-dim: rgba(81, 214, 164, 0.35);
+
+  --surface-inverse: var(--paper);
+  --surface-inverse-raise: var(--paper-raise);
+  --text-inverse: #15171c;
+  --text-inverse-muted: rgba(21, 23, 28, 0.64);
+  --line-inverse: rgba(21, 23, 28, 0.16);
+  --accent-inverse: #0c7a58;
+
+  --plate: var(--paper-raise);
+  --plate-line: rgba(21, 23, 28, 0.12);
+  --grain-opacity: 0.055;
+  --glow: radial-gradient(ellipse 70% 55% at 72% -10%, rgba(81, 214, 164, 0.07), transparent 60%);
+  --shadow-card:
+    0 1px 1px rgba(0, 0, 0, 0.14),
+    0 10px 28px -10px rgba(0, 0, 0, 0.4),
+    0 34px 90px -28px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover:
+    0 1px 1px rgba(0, 0, 0, 0.16),
+    0 16px 36px -12px rgba(0, 0, 0, 0.46),
+    0 48px 110px -30px rgba(0, 0, 0, 0.66);
+  --glass: rgba(17, 20, 26, 0.78);
+  --card-highlight: rgba(255, 255, 255, 0.22);
+  --aurora-a: rgba(81, 214, 164, 0.12);
+  --aurora-b: rgba(120, 170, 255, 0.07);
+  --grid-line: rgba(232, 231, 226, 0.052);
+  --watermark-stroke: rgba(232, 231, 226, 0.17);
+  --title-em-fill: linear-gradient(108deg, #f7f6f2 4%, rgba(232, 231, 226, 0.38) 96%);
+}
+
+:root[data-theme='light'] {
+  --bg: var(--paper);
+  --bg-raise: var(--paper-raise);
+  --text: #1a1c21;
+  --text-strong: #0d0f13;
+  --text-muted: rgba(26, 28, 33, 0.66);
+  --text-faint: rgba(26, 28, 33, 0.45);
+  --line: rgba(26, 28, 33, 0.16);
+  --line-strong: rgba(26, 28, 33, 0.34);
+
+  --accent: #0c7a58;
+  --accent-ink: #f3f7f4;
+  --accent-dim: rgba(12, 122, 88, 0.3);
+
+  --surface-inverse: var(--ink);
+  --surface-inverse-raise: var(--ink-raise);
+  --text-inverse: #ebeae5;
+  --text-inverse-muted: rgba(235, 234, 229, 0.64);
+  --line-inverse: rgba(235, 234, 229, 0.15);
+  --accent-inverse: #51d6a4;
+
+  --plate: #fbfaf6;
+  --plate-line: rgba(26, 28, 33, 0.13);
+  --grain-opacity: 0.045;
+  --glow: radial-gradient(ellipse 70% 55% at 72% -10%, rgba(12, 122, 88, 0.05), transparent 60%);
+  --shadow-card:
+    0 1px 1px rgba(13, 15, 19, 0.05),
+    0 10px 28px -12px rgba(13, 15, 19, 0.14),
+    0 34px 80px -30px rgba(13, 15, 19, 0.2);
+  --shadow-card-hover:
+    0 1px 1px rgba(13, 15, 19, 0.06),
+    0 16px 36px -14px rgba(13, 15, 19, 0.18),
+    0 48px 100px -32px rgba(13, 15, 19, 0.26);
+  --glass: rgba(247, 245, 239, 0.82);
+  --card-highlight: rgba(255, 255, 255, 0.85);
+  --aurora-a: rgba(12, 122, 88, 0.08);
+  --aurora-b: rgba(70, 120, 200, 0.05);
+  --grid-line: rgba(26, 28, 33, 0.055);
+  --watermark-stroke: rgba(26, 28, 33, 0.16);
+  --title-em-fill: linear-gradient(108deg, #0d0f13 4%, rgba(26, 28, 33, 0.42) 96%);
+}

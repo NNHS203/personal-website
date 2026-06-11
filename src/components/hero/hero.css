@@ -1,0 +1,342 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--header-height) + clamp(2.5rem, 1rem + 6vw, 7rem));
+  padding-bottom: clamp(3rem, 2rem + 5vw, 6.5rem);
+  overflow: hidden;
+}
+
+/* Aurora atmosphere */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -28%;
+  right: -14%;
+  width: 72vw;
+  height: 86vh;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 56% 48% at 64% 30%, var(--aurora-a), transparent 68%),
+    radial-gradient(ellipse 48% 42% at 30% 58%, var(--aurora-b), transparent 70%);
+  filter: blur(46px);
+}
+
+/* Blueprint grid, faded toward the fold */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(ellipse 92% 72% at 72% 0%, #000 24%, transparent 78%);
+  mask-image: radial-gradient(ellipse 92% 72% at 72% 0%, #000 24%, transparent 78%);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tools ticker closing the first screen */
+.hero__ticker {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  padding-block: 0.95rem;
+  border-block: 1px solid var(--line);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'kicker'
+    'title'
+    'main'
+    'aside';
+  gap: 0;
+}
+
+/* ————— Kicker + title (full width) ————— */
+
+.hero__kicker {
+  grid-area: kicker;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  color: var(--text-strong);
+}
+
+.hero__kicker-name {
+  color: var(--accent);
+}
+
+.hero__kicker-sep {
+  width: 3rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.hero__title {
+  grid-area: title;
+  margin-top: clamp(1.6rem, 1rem + 2.5vw, 3rem);
+  font-size: var(--text-hero);
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.hero__title em {
+  color: var(--text-muted);
+}
+
+@supports (-webkit-background-clip: text) {
+  .hero__title em {
+    background: var(--title-em-fill);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* ————— Left column ————— */
+
+.hero__main {
+  grid-area: main;
+  margin-top: clamp(2rem, 1.2rem + 3vw, 3.6rem);
+}
+
+.hero__lede {
+  max-width: 52ch;
+  font-size: var(--text-lede);
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: clamp(1.8rem, 1.2rem + 2.5vw, 3rem);
+}
+
+.hero__facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(2.2rem, 1.5rem + 3vw, 4rem);
+  border-block: 1px solid var(--line);
+}
+
+.hero__fact {
+  padding: 1.1rem 1.2rem 1.2rem 0;
+}
+
+.hero__fact + .hero__fact {
+  padding-left: 1.2rem;
+  border-left: 1px solid var(--line);
+}
+
+.hero__fact dt {
+  color: var(--text-faint);
+  font-size: var(--text-mono-xs);
+}
+
+.hero__fact dd {
+  margin-top: 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.6rem);
+  line-height: 1.1;
+  color: var(--text-strong);
+}
+
+/* ————— Dossier card ————— */
+
+.hero__aside {
+  grid-area: aside;
+  width: 100%;
+  margin-top: clamp(2.5rem, 1.5rem + 4vw, 4rem);
+}
+
+.dossier {
+  position: relative;
+  max-width: 404px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--glass);
+  -webkit-backdrop-filter: saturate(160%) blur(20px);
+  backdrop-filter: saturate(160%) blur(20px);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition:
+    transform var(--duration-normal) var(--ease-out-expo),
+    box-shadow var(--duration-normal) ease;
+}
+
+.dossier:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Hairline top highlight — catches light like brushed glass */
+.dossier::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  z-index: 1;
+  background: linear-gradient(90deg, transparent, var(--card-highlight), transparent);
+}
+
+.dossier__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-strong);
+}
+
+.dossier__head-type {
+  color: var(--text-faint);
+}
+
+.dossier__figure {
+  position: relative;
+  margin: 1.1rem;
+}
+
+.dossier__figure img {
+  width: 100%;
+  height: auto;
+  filter: contrast(1.02) saturate(1.05);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius-lg) - 7px);
+}
+
+.dossier__mark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--accent);
+  border-style: solid;
+  border-width: 0;
+}
+
+.dossier__mark--tl {
+  top: -5px;
+  left: -5px;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+
+.dossier__mark--br {
+  bottom: -5px;
+  right: -5px;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+.dossier__meta {
+  padding: 0.4rem 1.1rem;
+}
+
+.dossier__row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 0.55rem;
+}
+
+.dossier__row + .dossier__row {
+  border-top: 1px solid var(--line);
+}
+
+.dossier__row dt {
+  color: var(--text-faint);
+  font-size: var(--text-mono-xs);
+}
+
+.dossier__row dd {
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.dossier__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.dossier__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  color: var(--text-muted);
+}
+
+.dossier__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  color: var(--accent);
+  transition: color var(--duration-fast) ease;
+}
+
+.dossier__link:hover {
+  color: var(--text-strong);
+}
+
+/* ————— Breakpoints ————— */
+
+@media (min-width: 900px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    grid-template-areas:
+      'kicker kicker'
+      'title title'
+      'main aside';
+    column-gap: clamp(3rem, 2rem + 4vw, 6rem);
+  }
+
+  .hero__main {
+    margin-top: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
+    align-self: start;
+  }
+
+  .hero__aside {
+    justify-self: end;
+    align-self: start;
+    margin-top: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__fact {
+    padding: 0.85rem 0;
+  }
+
+  .hero__fact + .hero__fact {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
