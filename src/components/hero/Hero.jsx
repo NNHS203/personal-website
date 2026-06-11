@@ -7,19 +7,26 @@ import './hero.css'
 export function Hero() {
   return (
     <section id="top" className="hero" aria-labelledby="hero-heading">
-      <div className="container hero__grid">
+      <div className="container hero__intro">
         <Reveal as="p" className="hero__kicker mono">
           <span className="hero__kicker-name">{profile.name}</span>
           <span className="hero__kicker-sep" aria-hidden="true" />
           <span className="mono-muted">Security portfolio — Purdue ’26</span>
         </Reveal>
+      </div>
 
-        <Reveal as="h1" delay={60} id="hero-heading" className="hero__title serif">
+      <Reveal delay={50} className="hero__ticker">
+        <p className="visually-hidden">Tools: {marqueeTools.join(', ')}</p>
+        <Marquee items={marqueeTools} />
+      </Reveal>
+
+      <div className="container hero__grid">
+        <Reveal as="h1" delay={100} id="hero-heading" className="hero__title serif">
           Cybersecurity &<br />
           <em>digital forensics</em>.
         </Reveal>
 
-        <Reveal delay={120} className="hero__main">
+        <Reveal delay={160} className="hero__main">
           <p className="hero__lede">
             Incoming Security Risk &amp; Compliance at Texas Instruments. I build security
             operations, risk analytics, and forensics work where the evidence has to hold up.
@@ -45,7 +52,7 @@ export function Hero() {
           </dl>
         </Reveal>
 
-        <Reveal as="aside" delay={200} className="hero__aside" aria-label="Personnel file summary">
+        <Reveal as="aside" delay={240} className="hero__aside" aria-label="Personnel file summary">
           <article className="dossier">
             <header className="dossier__head mono">
               <span>File — HL·26</span>
@@ -92,11 +99,6 @@ export function Hero() {
           </article>
         </Reveal>
       </div>
-
-      <Reveal delay={260} className="hero__ticker">
-        <p className="visually-hidden">Tools: {marqueeTools.join(', ')}</p>
-        <Marquee items={marqueeTools} />
-      </Reveal>
     </section>
   )
 }

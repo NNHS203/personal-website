@@ -34,16 +34,17 @@
   mask-image: radial-gradient(ellipse 92% 72% at 72% 0%, #000 24%, transparent 78%);
 }
 
+.hero__intro,
 .hero__grid {
   position: relative;
   z-index: 1;
 }
 
-/* Tools ticker closing the first screen */
+/* Tools ticker — full-bleed band under the name, above the headline */
 .hero__ticker {
   position: relative;
   z-index: 1;
-  margin-top: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  margin-top: clamp(1.3rem, 0.9rem + 1.6vw, 2.2rem);
   padding-block: 0.95rem;
   border-block: 1px solid var(--line);
 }
@@ -52,7 +53,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'kicker'
     'title'
     'main'
     'aside';
@@ -62,7 +62,6 @@
 /* ————— Kicker + title (full width) ————— */
 
 .hero__kicker {
-  grid-area: kicker;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -82,7 +81,7 @@
 
 .hero__title {
   grid-area: title;
-  margin-top: clamp(1.6rem, 1rem + 2.5vw, 3rem);
+  margin-top: clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
   font-size: var(--text-hero);
   line-height: 0.96;
   letter-spacing: -0.015em;
@@ -301,7 +300,6 @@
   .hero__grid {
     grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
     grid-template-areas:
-      'kicker kicker'
       'title title'
       'main aside';
     column-gap: clamp(3rem, 2rem + 4vw, 6rem);
