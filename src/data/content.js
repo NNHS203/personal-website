@@ -2,39 +2,38 @@ export const profile = {
   name: 'Hansheng Liu',
   email: '2004hliu@gmail.com',
   linkedin: 'https://www.linkedin.com/in/hanshengliu/',
-  location: 'West Lafayette, IN / Naperville, IL',
-  school: 'Purdue University, 2022–2026',
-  nextRole: 'Security Risk & Compliance',
-  nextOrg: 'Texas Instruments',
-  nextDate: 'July 2026'
+  location: 'Dallas, TX',
+  school: 'Purdue University, graduated May 2026',
+  currentRole: 'IT Security Analyst, Risk & Compliance',
+  currentOrg: 'Texas Instruments',
+  currentSince: 'July 2026'
 }
 
 export const heroFacts = [
-  { label: 'Next post', value: 'Texas Instruments' },
-  { label: 'Degree', value: 'Purdue ’26' },
+  { label: 'Current role', value: 'Texas Instruments' },
+  { label: 'Graduated', value: 'Purdue · May ’26' },
   { label: 'Focus', value: 'Security + Data' }
 ]
 
 export const dossierMeta = [
   { label: 'Subject', value: 'Liu, Hansheng' },
   { label: 'Focus', value: 'Security risk · Digital forensics' },
-  { label: 'Education', value: 'Purdue University, 2022–2026' },
+  { label: 'Education', value: 'Purdue University · Graduated 05/2026' },
   { label: 'Degrees', value: 'B.S. Cybersecurity · B.A. Digital Criminology · E&I Certificate' },
-  { label: 'Next post', value: 'Texas Instruments · 07/2026' },
-  { label: 'Base', value: 'West Lafayette, IN' }
+  { label: 'Current role', value: 'Texas Instruments · 07/2026–Present' },
+  { label: 'Base', value: 'Dallas, TX' }
 ]
 
 export const work = [
   {
     organization: 'Texas Instruments',
-    role: 'Security Risk & Compliance',
-    period: 'From 07/2026',
+    role: 'IT Security Analyst, Risk & Compliance',
+    period: '07/2026 — Present',
     logo: 'logos/texas-instruments.svg',
     logoAlt: 'Texas Instruments logo',
-    incoming: true,
     points: [
-      'Returning to Texas Instruments to continue building security risk, compliance, and operational visibility work across enterprise environments.',
-      'Bringing prior TI experience in Splunk dashboards, Python automation, Cribl pipelines, evidence collection, and risk metrics into a broader security role.'
+      'Supporting enterprise security risk and compliance work with an emphasis on control visibility, evidence collection, and risk reporting.',
+      'Building on prior TI experience with Splunk dashboards, Python automation, Cribl pipelines, and operational risk metrics.'
     ],
     tags: ['Security risk', 'Compliance', 'Splunk', 'Automation']
   },
@@ -71,10 +70,20 @@ export const work = [
     logo: 'logos/pepsico.svg',
     logoAlt: 'PepsiCo logo',
     points: [
-      'Built predictive modeling pipelines integrating climate datasets, weather APIs, and Google Trends to assess water-related risks, with Power BI dashboards tracking drought, flood, and water stress across six U.S. states.',
-      'Automated daily ingestion with Python and Power Query, and applied ML forecasting that improved drought and flood prediction accuracy by 25%.'
+      'Co-built an environmental monitoring dashboard for PepsiCo manufacturing sites across six U.S. states, benchmarking current weather and water-risk conditions against 10 years of historical data.',
+      'Automated daily weather API ingestion and integrated National Weather Service and Google Trends data in Power BI and Power Query for state- and county-level monitoring of drought, flood, rainfall, snow, humidity, and wind.'
     ],
-    tags: ['Power BI', 'Python', 'ML forecasting', 'Risk modeling']
+    tags: ['Power BI', 'Power Query', 'API integration', 'Environmental risk'],
+    evidence: [
+      {
+        label: 'Official project page',
+        url: 'https://datamine.purdue.edu/pepsico/'
+      },
+      {
+        label: '2025 symposium poster',
+        url: 'https://datamine.purdue.edu/posters/TDM_Symposium2025_Poster_PepsiCo_EnvironmentalRisks.pdf'
+      }
+    ]
   },
   {
     organization: 'Sinopec',
@@ -95,10 +104,20 @@ export const work = [
     logo: 'logos/john-deere.svg',
     logoAlt: 'John Deere logo',
     points: [
-      'Developed an XGBoost soil moisture prediction model (R² = 0.90) using weather APIs, applying PCA to identify the top factors explaining 80% of variance.',
-      'Built ArcGIS, Tableau, and Python visualizations to support precision agriculture analysis and communicate model behavior.'
+      'Co-developed an XGBoost soil-moisture prediction model that reached R² = 0.90 on the test set, using soil and weather data sourced through USDA SSURGO and Meteostat.',
+      'Applied PCA to seven weather variables, with three principal components explaining 80% of the information, and communicated spatial patterns through ArcGIS, Tableau, and Python visualizations.'
     ],
-    tags: ['XGBoost', 'ArcGIS', 'Tableau', 'PCA']
+    tags: ['XGBoost', 'ArcGIS', 'Tableau', 'PCA'],
+    evidence: [
+      {
+        label: 'Official project page',
+        url: 'https://datamine.purdue.edu/current_partners/john-deere/'
+      },
+      {
+        label: '2024 symposium poster',
+        url: 'https://datamine.purdue.edu/wp-content/uploads/2024/07/TDM_Symposium2024_Poster_JohnDeere_Soil_Moisture.pdf'
+      }
+    ]
   }
 ]
 
@@ -173,7 +192,7 @@ export const tracks = [
   },
   {
     title: 'Data, ML & applied analytics',
-    focus: 'Predictive modeling and risk dashboards that drove real decisions — from drought forecasting to soil moisture prediction (R² = 0.90).',
+    focus: 'Predictive modeling and risk dashboards built for real operational questions — from environmental monitoring to soil moisture prediction (R² = 0.90).',
     tools: [
       'Python',
       'Pandas',
@@ -182,7 +201,7 @@ export const tracks = [
       'Jupyter',
       'XGBoost',
       'scikit-learn',
-      'ML forecasting',
+      'Environmental risk monitoring',
       'PCA',
       'Power BI',
       'Tableau',

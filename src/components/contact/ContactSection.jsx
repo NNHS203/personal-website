@@ -37,7 +37,7 @@ export function ContactSection() {
           </li>
           <li className="contact__link-meta mono">Base — {profile.location}</li>
           <li className="contact__link-meta mono">
-            Next — {profile.nextOrg}, {profile.nextDate}
+            Current — {profile.currentOrg}, since {profile.currentSince}
           </li>
         </Reveal>
       </div>

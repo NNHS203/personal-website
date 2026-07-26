@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container site-footer__inner mono">
         <span>© 2026 {profile.name}</span>
         <span className="site-footer__tag">Cybersecurity &amp; Digital Criminology — Purdue ’26</span>
-        <span className="site-footer__updated">File last updated 06 / 2026</span>
+        <span className="site-footer__updated">File last updated 07 / 2026</span>
       </div>
     </footer>
   )

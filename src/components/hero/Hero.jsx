@@ -28,7 +28,7 @@ export function Hero() {
 
         <Reveal delay={160} className="hero__main">
           <p className="hero__lede">
-            Incoming Security Risk &amp; Compliance at Texas Instruments. I build security
+            IT Security Analyst, Risk &amp; Compliance at Texas Instruments. I build security
             operations, risk analytics, and forensics work where the evidence has to hold up.
           </p>
 

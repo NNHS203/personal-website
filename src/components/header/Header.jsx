@@ -54,9 +54,12 @@ export function Header({ theme, onToggleTheme }) {
         </nav>
 
         <div className="site-header__actions">
-          <span className="site-header__status mono" title="Incoming: Texas Instruments, July 2026">
+          <span
+            className="site-header__status mono"
+            title="Current: IT Security Analyst, Risk & Compliance at Texas Instruments"
+          >
             <span className="status-dot" aria-hidden="true" />
-            TI ’26
+            TI · Current
           </span>
           <button
             type="button"

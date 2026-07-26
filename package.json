@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test:evidence": "node tests/evidence-check.mjs",
     "test:visual": "node tests/screenshot.mjs",
     "test:sections": "node tests/sections.mjs"
   },
